@@ -6,7 +6,7 @@ PRAGMA foreign_keys = ON;
 -- Material Table: Stores each tested polymeric material condition and its property group
 CREATE TABLE IF NOT EXISTS Material (
   material_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL UNQIUE,
+  name TEXT NOT NULL UNIQUE,
   group_name TEXT NOT NULL
 );
 
