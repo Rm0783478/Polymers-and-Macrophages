@@ -26,7 +26,7 @@ def main():
         ("Material_F_Pattern2", "Texture"), ("Material_G_Functional", "Composition"),
         ("Material_H_Baseline", "Baseline")
     ]
-    conn.executemany("INSERT OR IGNORE INTO Material (name, group_name) VALUES (?, ?);", materials)
+  conn.executemany("INSERT OR IGNORE INTO Material (name, group_name) VALUES (?, ?);", materials)
 
   # Define and insert focused immune response gene panel categories
   genes = [
@@ -35,7 +35,7 @@ def main():
         ("G3", "IL10", "Anti-inflammatory"),
         ("G4", "TGFB1", "Remodeling")
     ]
-    conn.executemany("INSERT OR IGNORE INTO Gene (gene_id, symbol, immune_response_category) VALUES (?, ?, ?);", genes)
+  conn.executemany("INSERT OR IGNORE INTO Gene (gene_id, symbol, immune_response_category) VALUES (?, ?, ?);", genes)
 
   # Populate 3 biological replicates per material conditons (39 total samples)
   cursor = conn.cursor()
